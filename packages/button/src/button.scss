@@ -1,0 +1,98 @@
+@import "~@audnavds/core/src/variables";
+
+.button {
+    $_this: &;
+
+    background-color: transparent;
+    border: none;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-family: $font-default-family;
+    font-size: $font-default-size;
+    font-weight: 500;
+    line-height: 1;
+    outline: 0;
+    padding: 0;
+    text-align: center;
+
+    &--primary {
+        background-color: $color-primary-500;
+        border-radius: 6px;
+        //color: $color-text-button-primary;
+        transition: background-color ease-in-out .2s;
+
+        &:hover {
+            background-color: $color-primary-600;
+        }
+
+        &:focus {
+            box-shadow: 0 0 0 3px $color-primary-100;
+        }
+
+        &:disabled {
+            background-color: $color-primary-50;
+            color: rgba(0, 0, 0, 0.3);
+        }
+    }
+
+    &--secondary {
+        border: 2px solid $color-primary-500;
+        border-radius: 6px;
+        color: $color-text-button-secondary;
+        transition: background-color, border-color, ease-in-out .2s;
+
+        &:hover {
+            background-color: $color-primary-50;
+            border-color: $color-primary-600;
+        }
+
+        &:focus {
+            border-color: $color-primary-600;
+            box-shadow: 0 0 0 3px #e1bee7;
+        }
+
+        &:disabled {
+            background-color: $color-primary-50;
+            border: none;
+            color: rgba(0, 0, 0, 0.3);
+        }
+    }
+
+    &--full-width {
+        width: 100%;
+    }
+
+    &--small {
+        &#{$_this}--primary {
+            padding: 8px 16px;
+        }
+
+        &#{$_this}--secondary {
+            padding: 6px 14px;
+        }
+    }
+
+    &--medium {
+        &#{$_this}--primary {
+            padding: 10px 20px;
+        }
+
+        &#{$_this}--secondary {
+            padding: 8px 18px;
+        }
+    }
+
+    &--large {
+        &#{$_this}--primary {
+            padding: 12px 24px;
+        }
+
+        &#{$_this}--secondary {
+            padding: 10px 20px;
+        }
+    }
+
+    &--disabled {
+        cursor: not-allowed;
+    }
+}

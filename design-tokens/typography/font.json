@@ -1,0 +1,8 @@
+{
+    "font": {
+        "default": {
+            "family": { "value": "'Calibri', sans-serif" },
+            "size": { "value": "16px" }
+        }
+    }
+}

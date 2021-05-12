@@ -1,0 +1,48 @@
+import { ArgsTable, Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import { useState } from 'react';
+
+import { Input } from '../packages/input/src/';
+
+<Meta args={{ id: 'input', label: 'Name', placeholder: 'John' }} argTypes={{ label: { type: 'string' } }} component={Input} title="Components/Input" />
+
+# Input
+
+Inputs let users enter and edit text.
+
+<Canvas>
+    <Story name="Default">
+        {(args) => {
+            const [value, setValue] = useState('');
+            const handleValueChange = (event) => {
+                const targetValue = event.target.value;
+                setValue(targetValue);
+                // This function is just for Storybook actions logging
+                args.onChange(targetValue);
+            };
+            return <Input {...args} onChange={handleValueChange} value={value} />;
+        }}
+    </Story>
+</Canvas>
+
+<ArgsTable story="Default" />
+
+## Code example with state
+
+<Canvas>
+    {(() => {
+        const [value, setValue] = useState('');
+        const handleValueChange = (event) => {
+            const targetValue = event.target.value;
+            setValue(targetValue);
+        };
+        return <Input label="Name" onChange={handleValueChange} value={value} placeholder="John" />;
+    })()}
+</Canvas>
+
+asdf
+asdf
+asd
+fa
+sdf
+as
+df

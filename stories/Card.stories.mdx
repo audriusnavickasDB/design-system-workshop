@@ -1,0 +1,27 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+
+import { Button } from '../packages/button/src/';
+import { Card, CardBody, CardFooter, CardFooterItem, SmartCard } from "../packages/card/src/";
+
+<Meta title="Components/Card" />
+
+# Card
+
+<Canvas>
+    <Story name="Dumb">
+        <Card>
+            <CardBody>Card body content</CardBody>
+            <CardFooter>
+                <CardFooterItem>
+                    <Button>Click me</Button>
+                </CardFooterItem>
+            </CardFooter>
+        </Card>
+    </Story>
+</Canvas>
+
+<Canvas>
+    <Story name="Smart">
+        <SmartCard footerButtonsProps={[{ children: 'Button 1' }, { children: 'Button 2' }]}>Card content</SmartCard>
+    </Story>
+</Canvas>

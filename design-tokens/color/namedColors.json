@@ -1,0 +1,10 @@
+{
+    "color": {
+        "text": {
+            "button": {
+                "primary": { "value": "{color.light.value}" },
+                "secondary": { "value": "{color.primary.500.value}" }
+            }
+        }
+    }
+}

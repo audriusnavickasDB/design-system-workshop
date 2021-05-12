@@ -1,0 +1,60 @@
+// Practice #3 Link Input component with core component and reuse
+@import "../../core/src/variables";
+// Correct example
+//@import "~@audnavds/core/src/variables";
+
+.input {
+    $_this: &;
+
+    box-sizing: border-box;
+    display: inline-flex;
+    flex-direction: column;
+
+    &__label {
+        box-sizing: border-box;
+        color: #fff;
+        // color: $color-dark;
+        font-family: $font-default-family;
+        font-size: 14px;
+        line-height: 1;
+        margin-bottom: 4px;
+
+        &--has-error {
+            color: $color-system-error;
+        }
+    }
+
+    &__field {
+        background-color: $color-light;
+        border: 1px solid $color-gray-400;
+        border-radius: 6px;
+        box-sizing: border-box;
+        font-family: $font-default-family;
+        font-size: $font-default-size;
+        line-height: 1;
+        outline: 0;
+        padding: 8px 16px 8px 8px;
+        transition: border-color ease-in-out 0.2s;
+
+        &::placeholder {
+            color: $color-gray-500;
+        }
+
+        &:hover:not(#{$_this}__field--has-error) {
+            border-color: $color-gray-500;
+        }
+
+        &:focus:not(#{$_this}__field--has-error) {
+            border-color: $color-primary-500;
+            box-shadow: 0 0 0 3px $color-primary-100;
+        }
+
+        &--has-error {
+            border-color: $color-system-error;
+
+            &:focus {
+                box-shadow: 0 0 0 3px #ef9a9a;
+            }
+        }
+    }
+}
