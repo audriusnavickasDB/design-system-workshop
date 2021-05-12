@@ -1,4 +1,4 @@
-@import "~@audnavds/core/src/variables";
+@import "../../core/src/variables";
 
 .button {
     $_this: &;
@@ -18,7 +18,7 @@
     &--primary {
         background-color: $color-primary-500;
         border-radius: 6px;
-        //color: $color-text-button-primary;
+        color: $color-text-button-primary;
         transition: background-color ease-in-out .2s;
 
         &:hover {

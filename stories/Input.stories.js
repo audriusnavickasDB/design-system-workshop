@@ -2,6 +2,11 @@ import React from 'react';
 
 import { Input } from '../packages/input/src';
 
+/** Practice #1 Migrate Input component story to MDX format
+ * 1. Everything should be identical to this story
+ * 2. Main category should be: MDX
+ */
+
 export default {
     component: Input,
     title: 'JSX/Input',

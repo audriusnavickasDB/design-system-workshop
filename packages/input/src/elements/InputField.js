@@ -6,20 +6,18 @@ import styles from '../input.scss';
 
 const MAIN_CLASSNAME = 'input__field';
 
-export const InputField = ({ className, hasError, ...other }) => {
-    return (
-        <input
-            className={classNames(
-                styles[MAIN_CLASSNAME],
-                {
-                    [styles[`${MAIN_CLASSNAME}--has-error`]]: hasError,
-                },
-                className
-            )}
-            {...other}
-        />
-    );
-};
+export const InputField = ({ className, hasError, ...other }) => (
+    <input
+        className={classNames(
+            styles[MAIN_CLASSNAME],
+            {
+                [styles[`${MAIN_CLASSNAME}--has-error`]]: hasError,
+            },
+            className
+        )}
+        {...other}
+    />
+);
 
 InputField.propTypes = {
     className: PropTypes.string,

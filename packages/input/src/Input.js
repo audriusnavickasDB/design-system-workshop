@@ -7,15 +7,12 @@ import styles from './input.scss';
 
 const MAIN_CLASSNAME = 'input';
 
-export const Input = ({ hasError, id, label, onChange, ...other }) => {
-    return (
-        // Practice #1 id for label is not needed
-        <label id={id} className={styles[MAIN_CLASSNAME]} htmlFor={id}>
-            <InputLabel hasError={hasError}>{label}</InputLabel>
-            <InputField hasError={hasError} id={id} name="input" onChange={onChange} {...other} />
-        </label>
-    );
-};
+export const Input = ({ hasError, id, label, onChange, ...other }) => (
+    <label id={id} className={styles[MAIN_CLASSNAME]} htmlFor={id}>
+        <InputLabel hasError={hasError}>{label}</InputLabel>
+        <InputField hasError={hasError} id={id} name="input" onChange={onChange} {...other} />
+    </label>
+);
 
 Input.propTypes = {
     /** If true, changes visual appearance to error state */

@@ -1,7 +1,5 @@
-// Practice #3 Link Input component with core component and reuse
+// Practice #3 Link Input component with core component and use proper variable values
 @import "../../core/src/variables";
-// Correct example
-//@import "~@audnavds/core/src/variables";
 
 .input {
     $_this: &;

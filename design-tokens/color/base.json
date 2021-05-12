@@ -20,11 +20,6 @@
             "500": { "value": "#9e9e9e" },
             "600": { "value": "#757575" },
             "700": { "value": "#616161" }
-        },
-        "system": {
-            "error": { "value": "#f44336" }
-        },
-        "light": { "value": "#ffffff" },
-        "dark": { "value": "#444444" }
+        }
     }
 }
