@@ -1,0 +1,27 @@
+import { ArgsTable, Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+
+import { Button } from '../packages/button/src/';
+
+<Meta
+    args={{ children: 'Button' }}
+    argTypes={{
+        children: { type: 'string' },
+        onClick: { table: { category: 'Events' } },
+        size: { options: ['small', 'medium', 'large'], table: { category: 'Appearance' }, type: 'select' },
+        variant: { table: { category: 'Appearance' } },
+    }}
+    component={Button}
+    title="MDX/Button"
+/>
+
+# Button
+
+Buttons allow users to take actions, and make choices, with a single tap.
+
+<Canvas>
+    <Story name="Primary">
+        {(args) => <Button data-testid="button" {...args} />}
+    </Story>
+</Canvas>
+
+<ArgsTable story="Primary" />
