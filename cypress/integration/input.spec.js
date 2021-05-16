@@ -6,7 +6,7 @@ const STORYBOOK_PATH = ['MDX', 'Input', 'Default'];
  * Note: You will need to add new data-testid for input component story
  */
 
-describe('Button', () => {
+describe('Input', () => {
     beforeEach(() => {
         cy.visitStorybook(STORYBOOK_PATH);
     });

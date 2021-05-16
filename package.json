@@ -8,7 +8,7 @@
         "lint": "npm run lint:js && npm run lint:style",
         "lint:js": "eslint ./packages --ext js,ts,tsx",
         "lint:style": "npx stylelint \"./packages/**/*.scss\"",
-        "publish:components": "lerna publish"
+        "publish:components": "lerna publish --no-git-tag-version"
     },
     "devDependencies": {
         "@babel/core": "7.13.13",

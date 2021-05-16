@@ -22,14 +22,15 @@ const StyleDictionary = require('style-dictionary').extend({
 /**
  * Practice #2: Register new transform:
  * Transform name should be: 'size/pxToRem'
+ * Add transform to platforms in order to apply it for tokens
  * Type should target properties value
  * Transform should only apply to size category
  * Transformer should convert size in pixels to size in rems. Base font size is 16px
  */
-StyleDictionary.registerTransform({
-    matcher: (prop) => {
-        console.log('matcher', prop);
-    },
-});
+// StyleDictionary.registerTransform({
+//     matcher: (prop) => {
+//         console.log('matcher', prop);
+//     },
+// });
 
 StyleDictionary.buildAllPlatforms();

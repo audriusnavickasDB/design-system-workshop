@@ -4,8 +4,6 @@ import commonjs from '@rollup/plugin-commonjs';
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 import postcss from 'rollup-plugin-postcss';
 
-const packageJson = './package.json';
-
 /** Practice #6 Configure bundler:
  * 1. Bundle component files to cjs and esm formats
  * 2. Add necessary plugins to work properly in the right order
@@ -16,12 +14,12 @@ export default {
     input: 'src/index.js',
     output: [
         {
-            file: packageJson.main,
+            file: 'dist/index.js',
             format: 'cjs',
             sourcemap: false,
         },
         {
-            file: packageJson.module,
+            file: 'dist/index.es.js',
             format: 'esm',
             sourcemap: false,
         },
